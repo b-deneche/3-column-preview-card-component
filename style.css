@@ -20,7 +20,13 @@ html body {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+}
+html body a {
+  text-decoration: none;
+  color: darkolivegreen;
 }
 html .container {
   display: grid;
@@ -48,7 +54,7 @@ html .container .card .card-title {
   margin-bottom: 1rem;
 }
 html .container .card p {
-  font-size: 0.8rem;
+  font-size: clamp(0.875rem, 0.5vw + 0.5rem, 1rem);
   margin-bottom: 1.5rem;
   color: hsla(0, 0%, 100%, 0.75);
   width: 23ch;
