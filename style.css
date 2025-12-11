@@ -34,6 +34,11 @@ html body a {
   color: darkolivegreen;
 }
 
+.attribution {
+  font-family: "Inter", sans-serif;
+  font-size: small;
+}
+
 .card-sedan {
   background-color: hsl(31, 77%, 52%);
   color: white;
