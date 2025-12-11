@@ -35,6 +35,7 @@
   margin: 0;
   padding: 0;
 }
+
 /* Global Styles */
 html {
   font-size: clamp(15px, 1.5vw + 1rem, 18px);
@@ -42,59 +43,17 @@ html {
     line-height: 1.6;
     @include flex-center;
     @include flex-column();
-    height: 100vh;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        @include flex-column;
+        overflow: auto;
     a{
         text-decoration: none;
         color: darkolivegreen;
     }
     }
-    .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        text-align: start;
-        background-color: $background-headings-buttons;
-        font-family: "Hanken Grotesk", sans-serif;
-        font-size: 2.5rem;
-        width: fit-content;
-        height: max-content;
-        .card{
-        flex: 1;
-        width: fit-content;
-        padding: 2rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            .card-title {
-                font-family: "Big Shoulders", sans-serif;
-                text-transform: uppercase;
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-            }    
-            p {
-                font-size: clamp(0.875rem, 0.5vw + 0.5rem, 1rem);
-                margin-bottom: 1.5rem;
-                color: $white-paragraphs;
-                width: 23ch;
-            }
-                    
-            .card-cta {
-                background-color: $background-headings-buttons;
-                font-size: small;
-                border-radius: 50px;
-                border: 2px solid $background-headings-buttons;
-                cursor: pointer;
-                width: 60%;
-                height: max-content;
-                padding: 0.75rem;
-                @include flex-center;
-                text-decoration: none;
-                margin: 4rem 0 0 0;
-                transition: all 0.3s ease;
-            }
-            .card-cta:hover {
-                background-color: transparent;
-                color: $background-headings-buttons;
-            }
-        }
-    }
+}
 
     .card-sedan {
         background-color: $Gold-500;
@@ -122,40 +81,75 @@ html {
         margin-bottom: 1rem;
         display: block;
     }
-    
-}
 
-@media (max-width: 1440px) {
-    body{
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        @include flex-column;
-        overflow: auto;
-    }
     .container {
         text-align: start;
         height: 100%;
         overflow: auto;
         @include flex-column;
-
         /*place-items: center;*/
         .card{
             padding: 2rem;
             box-shadow: none;
             align-self: center;
         }
+            .card-cta {
+                background-color: $background-headings-buttons;
+                font-family: "Hanken Grotesk", sans-serif;
+                font-size: small;
+                border-radius: 50px;
+                border: 2px solid $background-headings-buttons;
+                cursor: pointer;
+                width: 60%;
+                height: max-content;
+                padding: 0.75rem;
+                @include flex-center;
+                text-decoration: none;
+                margin: 4rem 0 0 0;
+                transition: all 0.3s ease;
+            }
+            .card-cta:hover {
+                background-color: transparent;
+                color: $background-headings-buttons;
+            }
+            .card-title {
+                font-family: "Big Shoulders", sans-serif;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }    
+            p {
+                font-family: "Inter", sans-serif;
+                font-size: clamp(0.875rem, 0.5vw + 0.5rem, 1rem);
+                color: $white-paragraphs;
+                width: 24ch;
+            }
+    }
+
+/* Media Queries */
+@media (min-width: 1440px) {
+    .container {
+        display: grid;
+        height: fit-content;
+        grid-template-columns: repeat(3, 1fr);
+        .card{
+            width: 100%;
+            height: 100%;
+            box-shadow: none;
+            padding: 3rem;
+            align-self: stretch;
+        }
         .card-luxury{
-            grid-row: 3;
+            grid-row: 1;
         }
         .card-sedan{
             grid-row: 1;
         }
         .card-suv{
-            grid-row: 2;
+            grid-row: 1;
         }
-        .card-cta {
-            margin-top: 1rem;
+        p{
+            width: 20ch;
         }
     }
 }
