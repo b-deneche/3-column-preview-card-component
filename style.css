@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+/*mixins*/
+/* Variables */
+/*primary colors*/
+/* Neutral*/
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+html {
+  font-size: clamp(15px, 1.5vw + 1rem, 18px);
+}
+html body {
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+html .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: start;
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 2.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+html .container .card {
+  flex: 1;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+html .container .card .card-title {
+  font-family: "Big Shoulders", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+html .container .card p {
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  width: 23ch;
+}
+html .container .card .card-cta {
+  background-color: hsl(0, 0%, 95%);
+  font-size: small;
+  border-radius: 50px;
+  border: 2px solid hsl(0, 0%, 95%);
+  cursor: pointer;
+  width: 60%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 4rem 0 0 0;
+  transition: all 0.3s ease;
+}
+html .container .card .card-cta:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+}
+html .card-sedan {
+  background-color: hsl(31, 77%, 52%);
+  color: white;
+}
+html .card-sedan .card-cta {
+  color: hsl(31, 77%, 52%);
+}
+html .card-suv {
+  background-color: hsl(184, 100%, 22%);
+  color: white;
+}
+html .card-suv .card-cta {
+  color: hsl(184, 100%, 22%);
+}
+html .card-luxury {
+  background-color: hsl(179, 100%, 13%);
+  color: white;
+}
+html .card-luxury .card-cta {
+  color: hsl(179, 100%, 13%);
+}
+html .card-icon {
+  width: 50px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+@media (max-width: 1440px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .container {
+    text-align: start;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    /*place-items: center;*/
+  }
+  .container .card {
+    padding: 2rem;
+    box-shadow: none;
+    align-self: center;
+  }
+  .container .card-luxury {
+    grid-row: 3;
+  }
+  .container .card-sedan {
+    grid-row: 1;
+  }
+  .container .card-suv {
+    grid-row: 2;
+  }
+  .container .card-cta {
+    margin-top: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */
